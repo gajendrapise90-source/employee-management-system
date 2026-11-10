@@ -1,0 +1,102 @@
+{
+    "info": {
+        "_postman_id": "a5e8e8e3-8dd2-4fac-bc63-814fe4530fd9",
+        "name": "Employee Management System API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Get All Employees",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:5000/api/employees",
+                    "path": [
+                        "api",
+                        "employees"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                }
+            }
+        },
+        {
+            "name": "Add Employee",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:5000/api/employees",
+                    "path": [
+                        "api",
+                        "employees"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Priya Sharma\",\n  \"department\": \"HR\",\n  \"role\": \"HR Executive\",\n  \"salary\": 30000,\n  \"join_date\": \"2026-11-10\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Update Employee",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:5000/api/employees/5",
+                    "path": [
+                        "api",
+                        "employees",
+                        "5"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Priya Sharma\",\n  \"department\": \"HR\",\n  \"role\": \"Senior HR Executive\",\n  \"salary\": 40000,\n  \"join_date\": \"2026-11-10\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete Employee",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:5000/api/employees/2",
+                    "path": [
+                        "api",
+                        "employees",
+                        "2"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                }
+            }
+        }
+    ]
+}
